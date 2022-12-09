@@ -10,14 +10,19 @@
     <script defer src="https://unpkg.com/alpinejs"></script>
 </head>
 
-<body x-data="{imageouvert:'https://picsum.photos/id/237/200/300',}">
+<body x-data="{imageouvert:'https://picsum.photos/id/237/200/300,'}">
     <h1>Galerie</h1>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sed expedita, dolorum nesciunt facere magni vitae
         accusamus architecto laudantium autem fugit nulla numquam consequuntur laborum neque ducimus excepturi? Nemo,
         nostrum!</p>
 
-    <img src="" href="">
-    <div class="overlay">
+    <img src="https://picsum.photos/id/236/40/60" alt="miniature chiot"
+        @click="imageouvert = 'https://picsum.photos/id/236/200/300'">
+
+    <img src="https://picsum.photos/id/237/40/60" alt="miniature chiot"
+        @click="imageouvert = 'https://picsum.photos/id/237/200/300'">
+
+    <div class=" overlay" x-show="imageouvert" @click="imageouvert = null" @keyup.escape.window="imageouvert = null">
         <figure><img :src="imageouvert" alt="image 237... un chiot"></figure>
     </div>
 </body>
