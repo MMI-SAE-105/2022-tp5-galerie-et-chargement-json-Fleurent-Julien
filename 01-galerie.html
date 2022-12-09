@@ -15,7 +15,7 @@
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui sed expedita, dolorum nesciunt facere magni vitae
         accusamus architecto laudantium autem fugit nulla numquam consequuntur laborum neque ducimus excepturi? Nemo,
         nostrum!</p>
-    <div class="overlay">
+    <div class="overlay" x-show="imageouvert" @click="imageouvert = null" @keyup.escape.window="imageouvert = null">
         <figure><img src="imageouvert" alt="image 237... un chiot"></figure>
     </div>
 </body>
